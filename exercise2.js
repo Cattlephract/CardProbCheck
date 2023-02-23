@@ -1,29 +1,3 @@
-// function drawFiveCards() {
-// let suits = ["H", "S", "D", "C"]
-// let values = ["A","K", "Q","J", "10", "9", "8", "7", "6", "5", "4", "3", "2"]
-// let deck = []
-// let hand = []
-
-// for (let i=0; i<suits.length; i++){
-//     for (let j=0; j<values.length;j++) {
-//         deck.push(values[j] + suits[i])
-//     }
-// }
-
-// for(let i=0; i<5; i++){
-//     let index = Math.floor(Math.random() * deck.length)
-//     let card = deck[index]
-//     hand.push(card)
-//     deck.splice(index, 1)
-// }
-//     return hand
-// }
-
-// const hand = drawFiveCards()
-// console.log(hand.join(' '));
-
-//Make deck
-//draw hand
 function drawFiveCards(){
     let hand= [];
     for (let i = 0; i < 5; i++){ //loop 5 times
@@ -63,8 +37,40 @@ console.log(hand.join(' '));
 // Ace, jack, queen and king have no numerical value in the code
 
 
-// Free zoom meeting ended...
-
-
 // if hand = string of cards
 // add to some kind of tally
+
+
+//draw certain number of cards and count to NUM_TRIALS
+    //Only count successful draws towards NUM_TRIALS
+//check if hit
+    // complicated part
+//log number of hits
+    // add to variables or something
+// Get percentage from number of hits and number of draws?
+    // log to console
+
+function countThreeOfAKind () {
+    threeProp = ((threeHits / NUM_TRIALS) * 100)
+    return threeProp
+}
+
+function countFourOfAKind () {
+    fourProp = ((fourHits / NUM_TRIALS) * 100)
+    return fourProp
+}
+
+function countFullHouse () {
+    fullProp = ((fullHits / NUM_TRIALS) * 100)
+    return fullProp
+}
+
+function countStraight () {
+    straightProp = ((straightHits / NUM_TRIALS) * 100)
+    return straightProp
+}
+
+function countFlush () {
+    flushProp = ((flushHits / NUM_TRIALS) * 100)
+    return flushProp
+}
