@@ -103,32 +103,32 @@ function drawStraight() {
 }
 
 function countThreeOfAKind () {
-    threeProp = ((threeHits / NUM_TRIALS) * 100)
+    threeProp = Math.round(((threeHits / NUM_TRIALS) * 100) * 100) / 100
     return threeProp
 }
 
 function countFourOfAKind () {
-    fourProp = ((fourHits / NUM_TRIALS) * 100)
+    fourProp = Math.round(((fourHits / NUM_TRIALS) * 100) * 100) / 100
     return fourProp
 }
 
 function countFullHouse () {
-    fullProp = ((fullHits / NUM_TRIALS) * 100)
+    fullProp = Math.round(((fullHits / NUM_TRIALS) * 100) * 100) / 100
     return fullProp
 }
 
 function countStraight () {
-    straightProp = ((straightHits / NUM_TRIALS) * 100)
+    straightProp = Math.round(((straightHits / NUM_TRIALS) * 100) * 100) / 100
     return straightProp
 }
 
 function countFlush () {
-    flushProp = ((flushHits / NUM_TRIALS) * 100)
+    flushProp = Math.round(((flushHits / NUM_TRIALS) * 100) * 100) / 100
     return flushProp
 }
 
 function countStraightFlush () {
-    straightFlushProp = ((straightFlushHits / NUM_TRIALS) * 100)
+    straightFlushProp = Math.round(((straightFlushHits / NUM_TRIALS) * 100) * 100) / 100
     return straightFlushProp
 }
 
