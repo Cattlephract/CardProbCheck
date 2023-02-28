@@ -1,3 +1,10 @@
+//3 of a kind ( same number different suit) 
+//4 of a kind (same number different suit )
+//full house (same 3 numbers and 2 same numbers)
+//straigh (5 cards in numerical order) DONE
+// flush (5 cards same suit) DONE
+// straight flush (5 cards numerical order with same suit)
+
 const NUM_TRIALS = 1000000; // main NUM_TRIALS variable for deciding the number of trials
 
 let twoHits = 0;        //Used to count two-of-a-kind hands for testing
@@ -73,32 +80,27 @@ function drawFlush() {
         }
     }
     flushHits = catches
-    console.log (flushHits)
+//    console.log (flushHits)
 }
 
-//3 of a kind ( same number different suit)
-//4 of a kind (same number different suit )
-//full house (same 3 numbers and 2 same numbers)
-//straigh (5 cards in numerical order)
-// flush (5 cards same suit)
-// straight flush (5 cards numerical order with same suit)
-
-// problems
-// Ace, jack, queen and king have no numerical value in the code
-
-
-// if hand = string of cards
-// add to some kind of tally
-
-
-//draw certain number of cards and count to NUM_TRIALS
-    //Only count successful draws towards NUM_TRIALS
-//check if hit
-    // complicated part
-//log number of hits
-    // add to variables or something
-// Get percentage from number of hits and number of draws?
-    // log to console
+function drawStraight() {
+    let catches = 0;
+    for (let a = 1; a <= NUM_TRIALS; a++) { //loop NUM_TRIALS times
+        let hand = drawValueHand()
+        let isStraight = true;
+        for (x = 1; x < 5; x ++){
+            if (hand[x] - hand[x - 1] !== 1) {
+                isStraight = false;
+                break;
+            }
+        }
+        if (isStraight) {
+            catches ++;
+        }
+    }
+    straightHits = catches
+//    console.log (straightHits)
+}
 
 function countThreeOfAKind () {
     threeProp = ((threeHits / NUM_TRIALS) * 100)
@@ -142,5 +144,6 @@ function runSimulation () {
 
 //testpush
 drawFlush()
+drawStraight()
 runSimulation()
 
